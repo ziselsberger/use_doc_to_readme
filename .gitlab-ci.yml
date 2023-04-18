@@ -2,4 +2,4 @@
 #  project: 'csat6025/doc_to_readme'
 #  file: '/templates/.update_readme_gitlab.yml'
 
-include: "https://github.com/ziselsberger/doc_to_readme/blob/main/templates/.update_readme_gitlab.yml"
+include: "https://github.com/ziselsberger/doc_to_readme/raw/main/templates/.update_readme_gitlab.yml"
