@@ -28,7 +28,7 @@ include:
 ## Functions & Classes  
 | Module | Type | Name/Call | Description |
 | --- | --- | --- | --- |
-| [main](./execute_doc_to_readme/main.py) | function  | `hello_world()` | Just says hello |
+| [main](./use_doc_to_readme/main.py) | function  | `hello_world()` | Just says hello |
 
 ---
 **Last Update:** 2023-04-18
