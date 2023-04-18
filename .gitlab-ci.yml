@@ -5,8 +5,10 @@ include:
 image: alpine:latest
 
 clone_doc_to_readme:
+  before_script:
+    - apk add bash git
   script:
-  - git clone https://github.com/ziselsberger/doc_to_readme.git /doc_to_readme
+    - git clone https://github.com/ziselsberger/doc_to_readme.git /doc_to_readme
 
 update_docu:
   when: on_success
