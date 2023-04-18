@@ -7,4 +7,4 @@ on:
 
 jobs:
   update-docu:
-    uses: ziselsberger/doc_to_readme/.github/workfows/use_doc_to_readme.yml@main
+    uses: ziselsberger/doc_to_readme/.github/workflows/use_doc_to_readme.yml@main
