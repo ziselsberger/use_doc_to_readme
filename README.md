@@ -31,6 +31,31 @@ include:
 
 GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 
+---
+
+### GitHub
+
+##### 1. Add dir `.github/workflows`
+
+##### 2. Create [Workflow file (.yml)](.github/workflows/update_readme.yml)
+
+> How to use **reusable workflows**  
+> https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8
+
+```yaml
+name: Update README.md
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-docu:
+    permissions:
+      contents: write
+    uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
+```
 
 ## Functions & Classes  
 | Module | Type | Name/Call | Description |
@@ -38,4 +63,4 @@ GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 | [main](./use_doc_to_readme/main.py) | function  | `hello_world()` | Just says hello |
 
 ---
-**Last Update:** 2023-04-18
+**Last Update:** 2023-04-17
