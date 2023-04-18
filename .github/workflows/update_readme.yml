@@ -13,4 +13,4 @@ jobs:
       - run: echo Hello, world!
 
   update-docu:
-    uses: ziselsberger/doc_to_readme/.github/workflows/use_doc_to_readme.yml@main
+    uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
