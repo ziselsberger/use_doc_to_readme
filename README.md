@@ -1,4 +1,4 @@
-# Module Documentation in README - using `doc_to_readme`
+# Module Documentation in README - using _doc_to_readme_
 
 Use external pipeline and doc_to_md.py from [GitHub Repo `doc_to_readme`](https://github.com/ziselsberger/doc_to_readme), 
 to add a table of all python functions & classes at the end of this README file.
