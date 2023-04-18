@@ -12,10 +12,15 @@ on how to:
 ##### 2. Create [GitLab Pipeline](.gitlab-ci.yml)
 There are two options
 
-a) use `include` / `include:remote` --> Pipeline YAML file stored in GitHub
+a) use `include` / `include:remote` --> Pipeline YAML file stored in GitHub  
+
 ```yaml
 include: "https://github.com/ziselsberger/doc_to_readme/raw/main/templates/.update_readme_gitlab.yml"
 ```
+
+> It must be the URL to the **raw** YAML file, otherwise the pipeline will fail!  
+> Error Message: _Included file `https://../.update_readme_gitlab.yml` does not have valid YAML syntax!_
+
 
 b) use `include:project` --> only possible if you have access to this [GitLab project](https://git.uibk.ac.at/csat6025/doc_to_readme)
 ```yaml
@@ -23,6 +28,8 @@ include:
   project: 'csat6025/doc_to_readme'
   file: '/templates/.update_readme_gitlab.yml'
 ```
+
+GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 
 
 ## Functions & Classes  
