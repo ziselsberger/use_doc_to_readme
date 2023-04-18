@@ -1,6 +1,3 @@
 include:
   project: 'csat6025/doc_to_readme'
   file: '/templates/.update_readme_gitlab.yml'
-
-update_docu:
-  when: on_success
