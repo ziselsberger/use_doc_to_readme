@@ -1,9 +1,6 @@
 include:
-  remote: https://github.com/ziselsberger/doc_to_readme.git/templates/.update_readme_gitlab.yml
-
-stages:
-  - clone_doc_to_readme
-  - update_docu
+  project: 'csat6025/doc_to_readme'
+  file: '/templates/.update_readme_gitlab.yml'
 
 image: alpine:latest
 
