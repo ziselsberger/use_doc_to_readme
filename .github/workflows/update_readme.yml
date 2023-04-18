@@ -1,0 +1,13 @@
+name: Update README.md
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-docu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use external action
+        uses: ziselsberger/doc_to_readme/.github/workfows/update_readme.yml@main
