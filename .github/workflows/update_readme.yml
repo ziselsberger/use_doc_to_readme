@@ -7,7 +7,4 @@ on:
 
 jobs:
   update-docu:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ziselsberger/doc_to_readme/.github/workfows/use_doc_to_readme.yml@main
+    uses: ziselsberger/doc_to_readme/.github/workfows/use_doc_to_readme.yml@main
