@@ -3,6 +3,32 @@
 Use external pipeline and doc_to_md.py from [GitHub Repo `doc_to_readme`](https://github.com/ziselsberger/doc_to_readme), 
 to add a table of all python functions & classes at the end of this README file.
 
+### GitHub
+
+##### 1. Add dir `.github/workflows`
+
+##### 2. Create [Workflow file (.yml)](.github/workflows/update_readme.yml)
+
+> How to use **reusable workflows**  
+> https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8
+
+```yaml
+name: Update README.md
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-docu:
+    permissions:
+      contents: write
+    uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
+```
+
+---
+
 ### GitLab
 ##### 1. Have a look at the [GitLab Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) on how to:
 * set up a **Project Access Token** 
@@ -31,30 +57,6 @@ include:
 GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 
 ---
-
-### GitHub
-
-##### 1. Add dir `.github/workflows`
-
-##### 2. Create [Workflow file (.yml)](.github/workflows/update_readme.yml)
-
-> How to use **reusable workflows**  
-> https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8
-
-```yaml
-name: Update README.md
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  update-docu:
-    permissions:
-      contents: write
-    uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
-```
 
 ## Functions & Classes  
 | Module | Type | Name/Call | Description |
