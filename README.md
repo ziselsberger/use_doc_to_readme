@@ -4,8 +4,7 @@ Use external pipeline and doc_to_md.py from [GitHub Repo `doc_to_readme`](https:
 to add a table of all python functions & classes at the end of this README file.
 
 ### GitLab
-1. Have a look at the [GitLab Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) 
-on how to:
+##### 1. Have a look at the [GitLab Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) on how to:
 * set up a **Project Access Token** 
 * add the token to the **CI Variables**
 
