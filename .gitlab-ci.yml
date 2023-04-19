@@ -1,5 +1,6 @@
-#include:
-#  project: 'csat6025/doc_to_readme'
-#  file: '/templates/.update_readme_gitlab.yml'
+variables:
+  PATH_TO_README: "README.md"
+  EXCLUDED_MODULES: ""
+  SELECTED_MODULES: ""
 
 include: "https://github.com/ziselsberger/doc_to_readme/raw/main/templates/.update_readme_gitlab.yml"
