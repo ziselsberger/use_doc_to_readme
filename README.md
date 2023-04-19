@@ -32,6 +32,9 @@ jobs:
       SELECTED_MODULES: ""
 ```
 
+`PATH_TO_README`, `EXCLUDED_MODULES` & `SELECTED_MODULES` will be passed as arguments to doc_to_md.py
+
+
 ---
 
 ### GitLab
