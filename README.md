@@ -59,10 +59,15 @@ GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 ---
 
 ### Bitbucket
-Currently not possible to use pipeline yml files from other repositories.  
-Ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
+> Currently not possible to use pipeline yml files from other repositories.  
+> Ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
 
-##### 1. Use [Bitbucket Pipeline](bitbucket-pipeline.yml)
+##### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#bitbucket) on how to:
+* enable pipelines 
+* set up a **Repository Access Token** 
+* add the token to the **Repository Variables**
+
+##### 2. Use [Bitbucket Pipeline](bitbucket-pipeline.yml)
 
 ```yaml
 pipelines:
@@ -84,7 +89,7 @@ pipelines:
             [...]
 ```
 
-##### 2. Check & update if needed
+##### 3. Check & update if needed
 
 * Branch name (default is **main**):  
 
