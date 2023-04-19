@@ -1,7 +1,7 @@
 variables:
   PATH_TO_README: "README.md"
-#  EXCLUDED_MODULES: ""
-#  SELECTED_MODULES: ""
+  EXCLUDED_MODULES: "main"
+  SELECTED_MODULES: ""
 
 # ------------------------------------
 # option a) use include:remote
