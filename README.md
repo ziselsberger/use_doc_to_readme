@@ -1,6 +1,6 @@
 # Module Documentation - using _doc_to_readme_
 
-Use external pipeline and doc_to_md.py from [GitHub Repo `doc_to_readme`](https://github.com/ziselsberger/doc_to_readme), 
+Use pipeline and doc_to_md.py from [GitHub Repo `doc_to_readme`](https://github.com/ziselsberger/doc_to_readme), 
 to add a table of all python functions & classes at the end of this README file.
 
 ### GitHub
@@ -64,8 +64,6 @@ GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 
 ##### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#bitbucket) on how to:
 * enable pipelines 
-* set up a **Repository Access Token** 
-* add the token to the **Repository Variables**
 
 ##### 2. Use [Bitbucket Pipeline](bitbucket-pipeline.yml)
 
@@ -80,8 +78,7 @@ pipelines:
             if [ $lines -gt 0 ];then
               git add "README.md"
               git commit -m "Auto-update README.md [skip ci]"
-              echo "git push 'https://x-token-auth:${GIT_PUSH_TOKEN}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}' main"
-              git push "https://x-token-auth:${GIT_PUSH_TOKEN}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}" main
+              git push main
             fi 
           script:
             [...]
@@ -94,8 +91,7 @@ pipelines:
 * Branch name (default is **main**):  
 
   > **.push:**   
-  >  echo "git push 'https://x-token-auth:${GIT_PUSH_TOKEN}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}' _main_"  
-  >  git push "https://x-token-auth:${GIT_PUSH_TOKEN}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}" _main_
+  >  git push _main_
   
 * Path to README
   > **.push:** git add _"README.md"_  
