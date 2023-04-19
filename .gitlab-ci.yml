@@ -3,4 +3,15 @@ variables:
   EXCLUDED_MODULES: ""
   SELECTED_MODULES: ""
 
+# ------------------------------------
+# option a) use include:remote
+# ------------------------------------
 include: "https://github.com/ziselsberger/doc_to_readme/raw/main/templates/.update_readme_gitlab.yml"
+
+
+# ------------------------------------
+# option b) use include:project
+# ------------------------------------
+# include:
+#   project: 'csat6025/doc_to_readme'
+#   file: '/templates/.update_readme_gitlab.yml'
