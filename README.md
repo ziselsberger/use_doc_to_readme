@@ -58,6 +58,12 @@ GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 
 ---
 
+### Bitbucket
+Currently not possible to use pipeline yml files from other repositories.
+https://jira.atlassian.com/browse/BCLOUD-14078
+
+---
+
 ## Functions & Classes  
 | Module | Type | Name/Call | Description |
 | --- | --- | --- | --- |
