@@ -94,6 +94,8 @@ pipelines:
     main:
       - step:
           name: doc_to_readme
+          .prep: &prep |
+            ...
           .push: &push |
             lines=$(git status -s | wc -l)
             if [ $lines -gt 0 ];then
@@ -102,9 +104,9 @@ pipelines:
               git push main
             fi 
           script:
-            - ...
-            - python3 doc_to_md.py -f README.md
-            - ...
+            - *prep
+            - python3 doc_to_md.py -f README.md [-e EXCLUDED_MODULES] [-m SELECTED_MODULES]
+            - *push
 ```
 
 ##### 3. Check & update if needed
@@ -117,6 +119,12 @@ pipelines:
 * Path to README
   > **.push:** git add _"README.md"_  
   > **script:** python3 doc_to_md.py -f _README.md_
+
+  * Call `doc_to_md.py` with optional arguments (-e / -m)  
+  ```
+  -e EXCLUDED_MODULES # excluded module name(s) (without '.py'), separated with a whitespace, e.g. "module_x module_y"
+  -m SELECTED_MODULES # selected module(s)
+  ```
 
 ---
 
