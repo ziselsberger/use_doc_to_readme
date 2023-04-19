@@ -65,7 +65,7 @@ GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 ##### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#bitbucket) on how to:
 * enable pipelines 
 
-##### 2. Use [Bitbucket Pipeline](bitbucket-pipelines.yml)
+##### 2. Use this [YAML](bitbucket-pipelines.yml) as Template
 
 ```yaml
 pipelines:
@@ -81,9 +81,9 @@ pipelines:
               git push main
             fi 
           script:
-            [...]
+            - ...
             - python3 doc_to_md.py -f README.md
-            [...]
+            - ...
 ```
 
 ##### 3. Check & update if needed
