@@ -11,10 +11,6 @@ env:
   SELECTED_MODULES: ""
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - run: env
   doc-to-readme:
     permissions:
       contents: write
