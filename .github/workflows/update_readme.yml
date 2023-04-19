@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  update-docu:
+  doc-to-readme:
     permissions:
       contents: write
     uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
