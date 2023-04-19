@@ -32,8 +32,21 @@ jobs:
       SELECTED_MODULES: ""
 ```
 
-`PATH_TO_README`, `EXCLUDED_MODULES` & `SELECTED_MODULES` will be passed as arguments to doc_to_md.py
+`PATH_TO_README`, `EXCLUDED_MODULES` & `SELECTED_MODULES` are passed to the [reusable workflow](https://github.com/ziselsberger/doc_to_readme/blob/main/.github/workflows/update_readme_github.yml) as inputs for doc_to_md.py
 
+```yaml
+inputs:
+  PATH_TO_README:
+    required: false
+    default: "README.md"
+    type: string
+  EXCLUDED_MODULES:
+    required: false
+    type: string
+  SELECTED_MODULES:
+    required: false
+    type: string
+```
 
 ---
 
