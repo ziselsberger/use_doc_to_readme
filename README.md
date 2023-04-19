@@ -10,7 +10,8 @@ to add a table of all python functions & classes at the end of this README file.
 ##### 2. Create [Workflow file (.yml)](.github/workflows/update_readme.yml)
 
 > GitHub **reusable workflows**:  
-> https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8
+> https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8  
+> https://docs.github.com/en/actions/using-workflows/reusing-workflows#creating-a-reusable-workflow
 
 ```yaml
 name: Update README.md
@@ -25,6 +26,10 @@ jobs:
     permissions:
       contents: write
     uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
+    with:
+      PATH_TO_README: "README.md"
+      EXCLUDED_MODULES: ""
+      SELECTED_MODULES: ""
 ```
 
 ---
