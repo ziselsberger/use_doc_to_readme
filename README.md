@@ -30,7 +30,7 @@ jobs:
 ---
 
 ### GitLab
-##### 1. Have a look at the [GitLab Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) on how to:
+##### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) on how to:
 * set up a **Project Access Token** 
 * add the token to the **CI Variables**
 
@@ -61,6 +61,40 @@ GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 ### Bitbucket
 Currently not possible to use pipeline yml files from other repositories.  
 Ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
+
+##### 1. Use [Bitbucket Pipeline](bitbucket-pipeline.yml)
+
+```yaml
+pipelines:
+  branches:
+    main:
+      - step:
+          name: doc_to_readme
+          .push: &push |
+            lines=$(git status -s | wc -l)
+            if [ $lines -gt 0 ];then
+              git add "README.md"
+              git commit -m "Auto-update README.md [skip ci]"
+              echo "git push 'https://x-token-auth:${GIT_PUSH_TOKEN}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}' main"
+              git push "https://x-token-auth:${GIT_PUSH_TOKEN}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}" main
+            fi 
+          script:
+            [...]
+            - python3 doc_to_md.py -f README.md
+            [...]
+```
+
+##### 2. Check & update if needed
+
+* Branch name (default is **main**):  
+
+  > **.push:**   
+  >  echo "git push 'https://x-token-auth:${GIT_PUSH_TOKEN}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}' _main_"  
+  >  git push "https://x-token-auth:${GIT_PUSH_TOKEN}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}" _main_
+  
+* Path to README
+  > **.push:** git add _"README.md"_  
+  > **script:** python3 doc_to_md.py -f _README.md_
 
 ---
 
