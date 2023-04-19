@@ -9,7 +9,7 @@ to add a table of all python functions & classes at the end of this README file.
 
 ##### 2. Create [Workflow file (.yml)](.github/workflows/update_readme.yml)
 
-> How to use **reusable workflows**  
+> GitHub **reusable workflows**:  
 > https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8
 
 ```yaml
@@ -59,8 +59,8 @@ GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 ---
 
 ### Bitbucket
-Currently not possible to use pipeline yml files from other repositories.
-https://jira.atlassian.com/browse/BCLOUD-14078
+Currently not possible to use pipeline yml files from other repositories.  
+Ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
 
 ---
 
