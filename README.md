@@ -1,6 +1,6 @@
 # Module Documentation - using _doc_to_readme_
 
-Use external pipeline and doc_to_md.py from [GitHub Repo `doc_to_readme`](https://github.com/ziselsberger/doc_to_readme), 
+Use pipeline and doc_to_md.py from [GitHub Repo `doc_to_readme`](https://github.com/ziselsberger/doc_to_readme), 
 to add a table of all python functions & classes at the end of this README file.
 
 ### GitHub
@@ -9,7 +9,7 @@ to add a table of all python functions & classes at the end of this README file.
 
 ##### 2. Create [Workflow file (.yml)](.github/workflows/update_readme.yml)
 
-> How to use **reusable workflows**  
+> GitHub **reusable workflows**:  
 > https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8
 
 ```yaml
@@ -30,7 +30,7 @@ jobs:
 ---
 
 ### GitLab
-##### 1. Have a look at the [GitLab Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) on how to:
+##### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) on how to:
 * set up a **Project Access Token** 
 * add the token to the **CI Variables**
 
@@ -58,10 +58,53 @@ GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 
 ---
 
+### Bitbucket
+> Currently not possible to use pipeline yml files from other repositories.  
+> Ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
+
+##### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#bitbucket) on how to:
+* enable pipelines 
+
+##### 2. Use [Bitbucket Pipeline](bitbucket-pipelines.yml)
+
+```yaml
+pipelines:
+  branches:
+    main:
+      - step:
+          name: doc_to_readme
+          .push: &push |
+            lines=$(git status -s | wc -l)
+            if [ $lines -gt 0 ];then
+              git add "README.md"
+              git commit -m "Auto-update README.md [skip ci]"
+              git push main
+            fi 
+          script:
+            [...]
+            - python3 doc_to_md.py -f README.md
+            [...]
+```
+
+##### 3. Check & update if needed
+
+* Branch name (default is **main**):  
+
+  > **.push:**   
+  >  git push _main_
+  
+* Path to README
+  > **.push:** git add _"README.md"_  
+  > **script:** python3 doc_to_md.py -f _README.md_
+
+---
+
 ## Functions & Classes  
 | Module | Type | Name/Call | Description |
 | --- | --- | --- | --- |
 | [main](./use_doc_to_readme/main.py) | function  | `hello_world()` | Just says hello |
 
+Created with: [doc_to_readme](https://github.com/ziselsberger/doc_to_readme)  
+
 ---
-**Last Update:** 2023-04-18
+**Last Update:** 2023-04-19
