@@ -4,13 +4,22 @@ on:
   push:
     branches:
       - main
+      
+env:
+  PATH_TO_README: "README.md"
+  EXCLUDED_MODULES: "main"
+  SELECTED_MODULES: ""
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: env
   doc-to-readme:
     permissions:
       contents: write
     uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
-    with:
-      PATH_TO_README: "README.md"
-      EXCLUDED_MODULES: "main"
-      SELECTED_MODULES: ""
+    #with:
+    #  PATH_TO_README: "README.md"
+    #  EXCLUDED_MODULES: "main"
+    #  SELECTED_MODULES: ""
