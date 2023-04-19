@@ -70,4 +70,4 @@ https://jira.atlassian.com/browse/BCLOUD-14078
 | [main](./use_doc_to_readme/main.py) | function  | `hello_world()` | Just says hello |
 
 ---
-**Last Update:** 2023-04-18
+**Last Update:** 2023-04-19
