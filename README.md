@@ -56,7 +56,17 @@ inputs:
 * add the token to the **CI Variables**
 
 ##### 2. Create [GitLab Pipeline](.gitlab-ci.yml)
-There are two options
+
+The environment variables of the external pipeline file can be overwritten in .gitlab-ci.yml file:
+
+```yaml
+variables:
+  PATH_TO_README: "README.md"
+  EXCLUDED_MODULES: ""
+  SELECTED_MODULES: ""
+```
+
+There are two options, how to include the external pipeline:
 
 a) use `include` / `include:remote` --> Pipeline YAML file stored in GitHub  
 
@@ -75,8 +85,10 @@ include:
   file: '/templates/.update_readme_gitlab.yml'
 ```
 
-GitLab Documentation: https://docs.gitlab.com/ee/ci/yaml/includes.html
 
+GitLab Documentation:   
+* https://docs.gitlab.com/ee/ci/yaml/includes.html  
+* https://docs.gitlab.cn/14.0/ee/ci/yaml/includes.html#overriding-external-template-values  
 ---
 
 ### Bitbucket
