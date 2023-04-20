@@ -1,6 +1,6 @@
-# Automated Module Documentation - using _doc_to_readme_
+# _doc_to_readme_ - Automated Module Documentation
 
-### Step-by-step guide on how to integrate [`doc_to_readme`](https://github.com/ziselsberger/doc_to_readme) in your repository
+### Step-by-step intro on how to integrate [doc_to_readme](https://github.com/ziselsberger/doc_to_readme) in your repository
 
 > * [GitHub](#github)
 > * [GitLab](#gitlab)
@@ -160,6 +160,7 @@ pipelines:
 ## Functions & Classes  
 | Module | Type | Name/Call | Description |
 | --- | --- | --- | --- |
+| [main](./use_doc_to_readme/main.py) | function  | `hello_world()` | Just says hello |
 
 Created with: [doc_to_readme](https://github.com/ziselsberger/doc_to_readme)  
 
