@@ -61,7 +61,7 @@ inputs:
 ---
 
 ## GitLab
-#### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) on how to:
+#### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/How_to_setup_the_pipelines.md#gitlab) on how to:
 * set up a **Project Access Token** 
 * add the token to the **CI Variables**
 
@@ -103,7 +103,7 @@ include:
 
 ## Bitbucket
 
-#### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#bitbucket) on how to:
+#### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/How_to_setup_the_pipelines.md#bitbucket) on how to:
 * enable pipelines 
 
 #### 2. Use this [Bitbucket Pipelines File](bitbucket-pipelines.yml)
