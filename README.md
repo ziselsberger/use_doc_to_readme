@@ -1,17 +1,13 @@
-# Module Documentation - using _doc_to_readme_
+# Automated Module Documentation - using _doc_to_readme_
 
 Use pipeline and doc_to_md.py from [GitHub Repo `doc_to_readme`](https://github.com/ziselsberger/doc_to_readme), 
 to add a table of all python functions & classes at the end of this README file.
 
-### GitHub
+## GitHub
 
-##### 1. Add dir `.github/workflows`
+#### 1. Add dir `.github/workflows`
 
-##### 2. Create [Workflow file (.yml)](.github/workflows/update_readme.yml)
-
-> GitHub **reusable workflows**:  
-> https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8  
-> https://docs.github.com/en/actions/using-workflows/reusing-workflows#creating-a-reusable-workflow
+#### 2. Use this [GitHub Actions Workflow File (.yml)](.github/workflows/update_readme.yml)
 
 ```yaml
 name: Update README.md
@@ -50,12 +46,12 @@ inputs:
 
 ---
 
-### GitLab
-##### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) on how to:
+## GitLab
+#### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#gitlab) on how to:
 * set up a **Project Access Token** 
 * add the token to the **CI Variables**
 
-##### 2. Create [GitLab Pipeline](.gitlab-ci.yml)
+#### 2. Use this [GitLab CI File (.yml)](.gitlab-ci.yml)
 
 The environment variables of the external pipeline file can be overwritten in .gitlab-ci.yml file:
 
@@ -84,21 +80,19 @@ include:
   project: 'csat6025/doc_to_readme'
   file: '/templates/.update_readme_gitlab.yml'
 ```
-
-
-GitLab Documentation:   
-* https://docs.gitlab.com/ee/ci/yaml/includes.html  
-* https://docs.gitlab.cn/14.0/ee/ci/yaml/includes.html#overriding-external-template-values  
 ---
 
-### Bitbucket
-> Currently not possible to use pipeline yml files from other repositories.  
-> Ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
+> ### GitLab Documentation:   
+> * https://docs.gitlab.com/ee/ci/yaml/includes.html  
+> * https://docs.gitlab.cn/14.0/ee/ci/yaml/includes.html#overriding-external-template-values  
+---
 
-##### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#bitbucket) on how to:
+## Bitbucket
+
+#### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/README.md#bitbucket) on how to:
 * enable pipelines 
 
-##### 2. Use this [YAML](bitbucket-pipelines.yml) as Template
+#### 2. Use this [Bitbucket Pipelines File](bitbucket-pipelines.yml)
 
 ```yaml
 pipelines:
@@ -121,7 +115,7 @@ pipelines:
             - *push
 ```
 
-##### 3. Check & update if needed
+#### 3. Check & update (if needed)
 
 * Branch name (default is **main**):  
 
