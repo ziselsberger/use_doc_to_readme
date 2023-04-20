@@ -121,7 +121,7 @@ pipelines:
             if [ $lines -gt 0 ];then
               git add "README.md"
               git commit -m "Auto-update README.md [skip ci]"
-              git push main
+              git push
             fi 
           script:
             - *prep
@@ -133,8 +133,10 @@ pipelines:
 
 * BRANCH_NAME (default is **main**):  
   ```yaml
-  # .push:
-  git push BRANCH_NAME 
+  pipelines:
+    branches:
+      BRANCH_NAME:
+        ... 
   ```
   
 * PATH_TO_README
