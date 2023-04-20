@@ -157,6 +157,11 @@ pipelines:
 > Status on ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
 ---
 
+_Copyright &copy; 2023 by Mirjam Ziselsberger_  
+_This code is free to use under the terms of the [MIT license](/LICENSE)._
+
+---
+
 ## Functions & Classes  
 | Module | Type | Name/Call | Description |
 | --- | --- | --- | --- |
