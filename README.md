@@ -1,6 +1,6 @@
 # Automated Module Documentation - using _doc_to_readme_
 
-### Step-by-step intro on how to integrate [`doc_to_readme`](https://github.com/ziselsberger/doc_to_readme) in your repository
+### Step-by-step guide on how to integrate [`doc_to_readme`](https://github.com/ziselsberger/doc_to_readme) in your repository
 
 > * [GitHub](#github)
 > * [GitLab](#gitlab)
