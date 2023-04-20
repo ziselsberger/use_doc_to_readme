@@ -1,7 +1,7 @@
 # Automated Module Documentation - using _doc_to_readme_
 
-> ### Step-by-step intro on how to integrate [`doc_to_readme`](https://github.com/ziselsberger/doc_to_readme) in your repository
->
+### Step-by-step intro on how to integrate [`doc_to_readme`](https://github.com/ziselsberger/doc_to_readme) in your repository
+
 > * [GitHub](#github)
 > * [GitLab](#gitlab)
 > * [Bitbucket](#bitbucket)
@@ -96,7 +96,7 @@ include:
 ```
 ---
 
-> ### GitLab Documentation:   
+> #### GitLab Documentation:   
 > * https://docs.gitlab.com/ee/ci/yaml/includes.html  
 > * https://docs.gitlab.cn/14.0/ee/ci/yaml/includes.html#overriding-external-template-values  
 ---
@@ -131,17 +131,23 @@ pipelines:
 
 #### 3. Check & update (if needed)
 
-* Branch name (default is **main**):  
-
-  > **.push:**   
-  >  git push _main_
-  
-* Path to README
-  > **.push:** git add _"README.md"_  
-  > **script:** python3 doc_to_md.py -f _README.md_
-
-  * Call `doc_to_md.py` with optional arguments (-e / -m)  
+* BRANCH_NAME (default is **main**):  
+  ```yaml
+  # .push:
+  git push BRANCH_NAME 
   ```
+  
+* PATH_TO_README
+  ```yaml
+  # .push:
+  git add PATH_TO_README   
+  
+  # script:
+  python3 doc_to_md.py -f PATH_TO_README  
+  ```
+  
+* Call `doc_to_md.py` with optional arguments (-e / -m)  
+  ```shell
   -e EXCLUDED_MODULES # excluded module name(s) (without '.py'), separated with a whitespace, e.g. "module_x module_y"
   -m SELECTED_MODULES # selected module(s)
   ```
