@@ -163,6 +163,7 @@ pipelines:
 | [main](./use_doc_to_readme/main.py) | function  | `hello_world()` | Just says hello |
 
 Created with: [doc_to_readme](https://github.com/ziselsberger/doc_to_readme)  
+[MIT](https://github.com/ziselsberger/doc_to_readme/LICENSE) &copy; 2023 Mirjam Ziselsberger
 
 ---
 **Last Update:** 2023-04-20
