@@ -31,7 +31,13 @@ jobs:
       SELECTED_MODULES: ""
 ```
 
-`PATH_TO_README`, `EXCLUDED_MODULES` & `SELECTED_MODULES` are passed to the [reusable workflow](https://github.com/ziselsberger/doc_to_readme/blob/main/.github/workflows/update_readme_github.yml) as inputs for [doc_to_md.py](https://github.com/ziselsberger/doc_to_readme/blob/main/src/doc_to_md.py).
+#### 3. Update branch name and variables (if needed)
+
+* Branch name defaults to **main**
+* These _**variables**_ are passed to the [reusable workflow](https://github.com/ziselsberger/doc_to_readme/blob/main/.github/workflows/update_readme_github.yml) as _**inputs**_ for [doc_to_md.py](https://github.com/ziselsberger/doc_to_readme/blob/main/src/doc_to_md.py).: 
+  * `PATH_TO_README` 
+  * `EXCLUDED_MODULES` 
+  * `SELECTED_MODULES` 
 
 ```yaml
 inputs:
@@ -46,6 +52,11 @@ inputs:
     required: false
     type: string     # same as excluded modules
 ```
+---
+
+> #### More information about reusable workflows:  
+> https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8  
+> https://docs.github.com/en/actions/using-workflows/reusing-workflows#creating-a-reusable-workflow
 
 ---
 
