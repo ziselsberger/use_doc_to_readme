@@ -1,7 +1,10 @@
 # Automated Module Documentation - using _doc_to_readme_
 
-Use pipeline and doc_to_md.py from [GitHub Repo `doc_to_readme`](https://github.com/ziselsberger/doc_to_readme), 
-to add a table of all python functions & classes at the end of this README file.
+> ### Step-by-step intro on how to integrate [`doc_to_readme`](https://github.com/ziselsberger/doc_to_readme) in your repository
+>
+> * [GitHub](#github)
+> * [GitLab](#gitlab)
+> * [Bitbucket](#bitbucket)
 
 ## GitHub
 
