@@ -160,6 +160,11 @@ pipelines:
 ---
 
 ## Functions & Classes  
+### [main](./main.py)
+
+| Type | Name/Call | Description |
+| --- | --- | --- |
+| function  | `hello_world()` | Just says hello |
 ### [doc_to_md](./doc_to_md.py)
 
 | Type | Name/Call | Description |
@@ -170,7 +175,7 @@ pipelines:
 | function  | `parse_through_file(file: str) -> Dict[str, Dict[str, str]]` | Parse through module and gather info on classes and functions |
 
 Created with: [doc_to_readme](https://github.com/ziselsberger/doc_to_readme)  
-[MIT](https://github.com/ziselsberger/doc_to_readme/blob/main/LICENSE) &copy; 2023 Mirjam Ziselsberger
+[MIT](https://github.com/ziselsberger/doc_to_readme/LICENSE) &copy; 2023 Mirjam Ziselsberger
 
 ---
-**Last Update:** 2023-04-23
+**Last Update:** 2023-04-20
