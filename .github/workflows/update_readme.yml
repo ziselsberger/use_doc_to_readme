@@ -14,6 +14,6 @@ jobs:
     uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
     with:
       PATH_TO_README: "README.md"
-      EXCLUDED_MODULES: ""
+      EXCLUDED_MODULES: "doc_to_readme"
       SELECTED_MODULES: ""
       SEPARATED: "true"
