@@ -78,7 +78,7 @@ The environment variables of the external pipeline file can be overwritten in .g
 ```yaml
 variables:
   PATH_TO_README: "README.md"
-  EXCLUDED_MODULES: "doc_to_readme"
+  EXCLUDED_MODULES: "doc_to_md"
   SELECTED_MODULES: ""
   SEPARATED: "true"
 ```
