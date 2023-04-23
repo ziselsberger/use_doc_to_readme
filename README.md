@@ -173,9 +173,22 @@ pipelines:
 | function  | `add_summary_to_md(overview_dict: Dict[str, Optional[Union[str, Dict[str, str]]]], markdown: str, separate: bool = True)` | Add Table with all Functions & Classes to Markdown file. |
 | function  | `update_markdown_file(file: str = "../README.md", root_dir: str = None, exclude_modules: Tuple[str, ...] = (), specified_modules: Optional[Tuple[str, ...]] = None, separate: bool = True)` | Add/update 'Functions & Classes' Section in Markdown file. |
 | function  | `parse_through_file(file: str) -> Dict[str, Dict[str, str]]` | Parse through module and gather info on classes and functions |
+### [functions](./src/functions.py)
+
+| Type | Name/Call | Description |
+| --- | --- | --- |
+| function  | `mean(x: int = 1, y: int = 2) -> float` | Calculate mean of x and y. |
+| function  | `add(x: int = 4, y: int = 5) -> int` | Add two numbers (x and y). |
+| function  | `multiply(x: int = 6, y: int = 7) -> int` | Multiply two numbers (x and y). |
+### [classes](./src/classes.py)
+
+| Type | Name/Call | Description |
+| --- | --- | --- |
+| class  | `TechnicalQualityTests` | Base class for all technical QC Tests. |
+| method (TechnicalQualityTests) | `add_to_dict(self, test_name: str, test_result: Tuple[bool, str]) -> None` | Add QC result to dictionary. |
 
 Created with: [doc_to_readme](https://github.com/ziselsberger/doc_to_readme)  
-[MIT](https://github.com/ziselsberger/doc_to_readme/LICENSE) &copy; 2023 Mirjam Ziselsberger
+[MIT](https://github.com/ziselsberger/doc_to_readme/blob/main/LICENSE) &copy; 2023 Mirjam Ziselsberger
 
 ---
-**Last Update:** 2023-04-20
+**Last Update:** 2023-04-23
