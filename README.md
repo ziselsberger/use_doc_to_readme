@@ -132,7 +132,7 @@ pipelines:
             fi 
           script:
             - *prep
-            - python3 doc_to_md.py -f README.md [-e EXCLUDED_MODULES] [-m SELECTED_MODULES]
+            - python3 doc_to_md.py -f README.md [-e EXCLUDED_MODULES] [-m SELECTED_MODULES] [--separated]
             - *push
 ```
 
