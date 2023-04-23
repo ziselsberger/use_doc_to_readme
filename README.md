@@ -27,8 +27,9 @@ jobs:
     uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
     with:
       PATH_TO_README: "README.md"
-      EXCLUDED_MODULES: ""
+      EXCLUDED_MODULES: "doc_to_md"
       SELECTED_MODULES: ""
+      SEPARATED: "true"
 ```
 
 #### 3. Update branch name and variables (if needed)
@@ -38,6 +39,7 @@ jobs:
   * `PATH_TO_README` 
   * `EXCLUDED_MODULES` 
   * `SELECTED_MODULES` 
+  * `SEPARATED`
 
 ```yaml
 inputs:
@@ -51,6 +53,10 @@ inputs:
   SELECTED_MODULES:
     required: false
     type: string     # same as excluded modules
+  SEPARATED:
+    required: false
+    default: "true"  # create one table per module
+    type: string
 ```
 ---
 
@@ -72,8 +78,9 @@ The environment variables of the external pipeline file can be overwritten in .g
 ```yaml
 variables:
   PATH_TO_README: "README.md"
-  EXCLUDED_MODULES: ""
+  EXCLUDED_MODULES: "doc_to_readme"
   SELECTED_MODULES: ""
+  SEPARATED: "true"
 ```
 
 There are two options, how to include the external pipeline:
@@ -148,10 +155,11 @@ pipelines:
   python3 doc_to_md.py -f PATH_TO_README  
   ```
   
-* Call `doc_to_md.py` with optional arguments (-e / -m)  
+* Call `doc_to_md.py` with optional arguments (-e / -m / --separated)  
   ```shell
   -e EXCLUDED_MODULES # excluded module name(s) (without '.py'), separated with a whitespace, e.g. "module_x module_y"
   -m SELECTED_MODULES # selected module(s)
+  --separted  # create one table per module
   ```
 
 ---
