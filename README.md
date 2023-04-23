@@ -160,6 +160,11 @@ pipelines:
 ---
 
 ## Functions & Classes  
+### [main](./main.py)
+
+| Type | Name/Call | Description |
+| --- | --- | --- |
+| function  | `hello_world()` | Just says hello |
 ### [doc_to_md](./doc_to_md.py)
 
 | Type | Name/Call | Description |
