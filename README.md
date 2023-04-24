@@ -168,19 +168,19 @@ pipelines:
 ---
 
 ## Functions & Classes  
-### [main](./main.py)
+### [main.py](./main.py)
 
 | Type | Name/Call | Description |
 | --- | --- | --- |
 | function  | `hello_world()` | Just says hello |
-### [my_functions](./src/my_functions.py)
+### [my_functions.py](./src/my_functions.py)
 
 | Type | Name/Call | Description |
 | --- | --- | --- |
 | function  | `mean(x: int = 1, y: int = 2) -> float` | Calculate mean of x and y. |
 | function  | `add(x: int = 4, y: int = 5) -> int` | Add two numbers (x and y). |
 | function  | `multiply(x: int = 6, y: int = 7) -> int` | Multiply two numbers (x and y). |
-### [my_classes](./src/my_classes.py)
+### [my_classes.py](./src/my_classes.py)
 
 | Type | Name/Call | Description |
 | --- | --- | --- |
