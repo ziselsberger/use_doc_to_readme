@@ -168,18 +168,13 @@ pipelines:
 ---
 
 ## Functions & Classes  
+
 ### [main.py](./main.py)
 
 | Type | Name/Call | Description |
 | --- | --- | --- |
 | function  | `hello_world()` | Just says hello |
-### [my_functions.py](./src/my_functions.py)
 
-| Type | Name/Call | Description |
-| --- | --- | --- |
-| function  | `mean(x: int = 1, y: int = 2) -> float` | Calculate mean of x and y. |
-| function  | `add(x: int = 4, y: int = 5) -> int` | Add two numbers (x and y). |
-| function  | `multiply(x: int = 6, y: int = 7) -> int` | Multiply two numbers (x and y). |
 ### [my_classes.py](./src/my_classes.py)
 
 | Type | Name/Call | Description |
@@ -187,8 +182,16 @@ pipelines:
 | class  | `TechnicalQualityTests` | Base class for all technical QC Tests. |
 | method (TechnicalQualityTests) | `add_to_dict(self, test_name: str, test_result: Tuple[bool, str]) -> None` | Add QC result to dictionary. |
 
+### [my_functions.py](./src/my_functions.py)
+
+| Type | Name/Call | Description |
+| --- | --- | --- |
+| function  | `mean(x: int = 1, y: int = 2) -> float` | Calculate mean of x and y. |
+| function  | `add(x: int = 4, y: int = 5) -> int` | Add two numbers (x and y). |
+| function  | `multiply(x: int = 6, y: int = 7) -> int` | Multiply two numbers (x and y). |
+
 Created with: [doc_to_readme](https://github.com/ziselsberger/doc_to_readme)  
 [MIT](https://github.com/ziselsberger/doc_to_readme/blob/main/LICENSE) &copy; 2023 Mirjam Ziselsberger
 
 ---
-**Last Update:** 2023-04-24
+**Last Update:** 2023-04-27
