@@ -1,10 +1,9 @@
-image: alpine:latest
-
 pipelines:
   branches:
     main:
       - step:
           name: doc_to_readme
+          image: alpine:latest
           .prep: &prep |
             apk add bash git
             apk add --no-cache python3
@@ -17,10 +16,10 @@ pipelines:
             if [ $lines -gt 0 ];then
               git add "README.md"
               git commit -m "Auto-update README.md [skip ci]"
-              git push main
+              git push
             fi 
           script:
             - *prep
-            - python3 doc_to_md.py -f README.md
+            - python3 doc_to_md.py -f README.md -e doc_to_md --separated
             - rm doc_to_md.py
             - *push
