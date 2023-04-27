@@ -115,25 +115,34 @@ include:
 
 #### 2. Use this [Bitbucket Pipelines File](bitbucket-pipelines.yml)
 
+* If you already have bitbucket-pipelines.yml: Copy the `definition` and add the step `*doc_to_readme` in your existing pipeline(s).
+
 ```yaml
-pipelines:
-  branches:
-    main:
-      - step:
-          name: doc_to_readme
-          .prep: &prep |
-            ...
-          .push: &push |
-            lines=$(git status -s | wc -l)
+definitions:
+  steps:
+    - step: &doc_to_readme
+        name: Add module documentation to README
+        image: alpine:latest
+        script:
+          - apk add --no-cache python3 bash git
+          - git fetch
+          - git clone 'https://github.com/ziselsberger/doc_to_readme.git'
+          - cp ./doc_to_readme/src/doc_to_md/doc_to_md.py .
+          - rm -rf doc_to_readme
+          - python3 doc_to_md.py -f README.md [-e EXCLUDED_MODULES] [-m SELECTED_MODULES] [--separated]
+          - rm doc_to_md.py
+          - lines=$(git status -s | wc -l)
+          - |
             if [ $lines -gt 0 ];then
               git add "README.md"
               git commit -m "Auto-update README.md [skip ci]"
               git push
-            fi 
-          script:
-            - *prep
-            - python3 doc_to_md.py -f README.md [-e EXCLUDED_MODULES] [-m SELECTED_MODULES] [--separated]
-            - *push
+            fi
+            
+pipelines:
+  branches:
+    main:
+      - step: *doc_to_readme
 ```
 
 #### 3. Check & update (if needed)
