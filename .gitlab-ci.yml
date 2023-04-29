@@ -1,5 +1,6 @@
 variables:
   PATH_TO_README: "README.md"
+  ROOT_DIR: ""
   EXCLUDED_MODULES: "doc_to_md"
   SELECTED_MODULES: ""
   SEPARATED: "true"
