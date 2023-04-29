@@ -27,6 +27,7 @@ jobs:
     uses: ziselsberger/doc_to_readme/.github/workflows/update_readme_github.yml@main
     with:
       PATH_TO_README: "README.md"
+      ROOT_DIR: ""
       EXCLUDED_MODULES: "doc_to_md"
       SELECTED_MODULES: ""
       SEPARATED: "true"
@@ -37,6 +38,7 @@ jobs:
 * Branch name defaults to **main**
 * These _**variables**_ are passed to the [reusable workflow](https://github.com/ziselsberger/doc_to_readme/blob/main/.github/workflows/update_readme_github.yml) as _**inputs**_ for [doc_to_md.py](https://github.com/ziselsberger/doc_to_readme/blob/main/src/doc_to_md.py).: 
   * `PATH_TO_README` 
+  * `ROOT_DIR`
   * `EXCLUDED_MODULES` 
   * `SELECTED_MODULES` 
   * `SEPARATED`
@@ -47,6 +49,9 @@ inputs:
     required: false
     default: "README.md"
     type: string
+  ROOT_DIR:
+    required: fales
+    type: string     # directory used as root for searching modules, defaults to folder containing README.md
   EXCLUDED_MODULES:
     required: false
     type: string     # provide module name(s) (without '.py'), separated with a whitespace, e.g. "module_x module_y"
@@ -78,6 +83,7 @@ The environment variables of the external pipeline file can be overwritten in .g
 ```yaml
 variables:
   PATH_TO_README: "README.md"
+  ROOT_DIR: ""
   EXCLUDED_MODULES: "doc_to_md"
   SELECTED_MODULES: ""
   SEPARATED: "true"
@@ -129,7 +135,7 @@ definitions:
           - git clone 'https://github.com/ziselsberger/doc_to_readme.git'
           - cp ./doc_to_readme/src/doc_to_md/doc_to_md.py .
           - rm -rf doc_to_readme
-          - python3 doc_to_md.py -f README.md [-e EXCLUDED_MODULES] [-m SELECTED_MODULES] [--separated]
+          - python3 doc_to_md.py -f README.md [-r ROOT_DIR] [-e EXCLUDED_MODULES] [-m SELECTED_MODULES] [--separated]
           - rm doc_to_md.py
           - lines=$(git status -s | wc -l)
           - |
@@ -164,11 +170,12 @@ pipelines:
   python3 doc_to_md.py -f PATH_TO_README  
   ```
   
-* Call `doc_to_md.py` with optional arguments (-e / -m / --separated)  
+* Call `doc_to_md.py` with optional arguments (-r / -e / -m / --separated)  
   ```shell
-  -e EXCLUDED_MODULES # excluded module name(s) (without '.py'), separated with a whitespace, e.g. "module_x module_y"
-  -m SELECTED_MODULES # selected module(s)
-  --separted  # create one table per module
+  -r ROOT_DIR          # Directory used as root for searching modules, defaults to folder containing README.md
+  -e EXCLUDED_MODULES  # excluded module name(s) (without '.py'), separated with a whitespace, e.g. "module_x module_y"
+  -m SELECTED_MODULES  # selected module(s)
+  --separted           # create one table per module
   ```
 
 ---
