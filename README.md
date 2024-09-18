@@ -2,9 +2,9 @@
 
 ### Step-by-step intro on how to integrate [doc_to_readme](https://github.com/ziselsberger/doc_to_readme) in your repository
 
-> * [GitHub](#github)
-> * [GitLab](#gitlab)
-> * [Bitbucket](#bitbucket)
+* [GitHub](#github)
+* [GitLab](#gitlab)
+* [Bitbucket](#bitbucket)
 
 ## GitHub
 
@@ -63,13 +63,12 @@ inputs:
     default: "true"  # create one table per module
     type: string
 ```
----
 
+
+>[!TIP]
 > #### More information about reusable workflows:  
 > https://dev.to/n3wt0n/avoid-duplication-github-actions-reusable-workflows-3ae8  
 > https://docs.github.com/en/actions/using-workflows/reusing-workflows#creating-a-reusable-workflow
-
----
 
 ## GitLab
 #### 1. Have a look at these [Instructions](https://github.com/ziselsberger/doc_to_readme/blob/main/How_to_setup_the_pipelines.md#gitlab) on how to:
@@ -107,12 +106,12 @@ include:
   project: 'csat6025/doc_to_readme'
   file: '/templates/.update_readme_gitlab.yml'
 ```
----
 
+>[!TIP]
 > #### GitLab Documentation:   
 > * https://docs.gitlab.com/ee/ci/yaml/includes.html  
 > * https://docs.gitlab.cn/14.0/ee/ci/yaml/includes.html#overriding-external-template-values  
----
+
 
 ## Bitbucket
 
@@ -178,10 +177,9 @@ pipelines:
   --separted           # create one table per module
   ```
 
----
+>[!NOTE]
 > **Currently, it's not possible to use pipeline yml files from other repositories.**  
 > Status on ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
----
 
 ## Functions & Classes  
 
