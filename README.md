@@ -96,6 +96,7 @@ a) use `include` / `include:remote` --> Pipeline YAML file stored in GitHub
 include: "https://github.com/ziselsberger/doc_to_readme/raw/main/templates/.update_readme_gitlab.yml"
 ```
 
+> [!IMPORTANT]
 > It must be the URL to the **raw** YAML file, otherwise the pipeline will fail!  
 > Error Message: _Included file `https://../.update_readme_gitlab.yml` does not have valid YAML syntax!_
 
