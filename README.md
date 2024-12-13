@@ -88,9 +88,7 @@ variables:
   SEPARATED: "true"
 ```
 
-There are two options, how to include the external pipeline:
-
-a) use `include` / `include:remote` --> Pipeline YAML file stored in GitHub  
+use `include` / `include:remote` --> Pipeline YAML file stored in GitHub  
 
 ```yaml
 include: "https://github.com/ziselsberger/doc_to_readme/raw/main/templates/.update_readme_gitlab.yml"
@@ -99,14 +97,6 @@ include: "https://github.com/ziselsberger/doc_to_readme/raw/main/templates/.upda
 > [!IMPORTANT]
 > It must be the URL to the **raw** YAML file, otherwise the pipeline will fail!  
 > Error Message: _Included file `https://../.update_readme_gitlab.yml` does not have valid YAML syntax!_
-
-
-b) use `include:project` --> only possible if you have access to this [GitLab project](https://git.uibk.ac.at/csat6025/doc_to_readme)
-```yaml
-include:
-  project: 'csat6025/doc_to_readme'
-  file: '/templates/.update_readme_gitlab.yml'
-```
 
 >[!TIP]
 > #### GitLab Documentation:   
