@@ -5,6 +5,7 @@
 * [GitHub](#github)
 * [GitLab](#gitlab)
 * [Bitbucket](#bitbucket)
+* [Azure DevOps](#azure-devops)
 
 ## GitHub
 
@@ -111,7 +112,7 @@ include: "https://github.com/ziselsberger/doc_to_readme/raw/main/templates/.upda
 
 #### 2. Use this [Bitbucket Pipelines File](bitbucket-pipelines.yml)
 
-* If you already have bitbucket-pipelines.yml: Copy the `definition` and add the step `*doc_to_readme` in your existing pipeline(s).
+* If you already have bitbucket-pipelines.yml: Copy the `definition` and add the step `*doc_to_readme` in your existing pipeline.
 
 ```yaml
 definitions:
@@ -162,6 +163,32 @@ pipelines:
   
 * Call `doc_to_md.py` with optional arguments (-r / -e / -m / --separated)  
   ```shell
+  -r ROOT_DIR          # Directory used as root for searching modules, defaults to folder containing README.md
+  -e EXCLUDED_MODULES  # excluded module name(s) (without '.py'), separated with a whitespace, e.g. "module_x module_y"
+  -m SELECTED_MODULES  # selected module(s)
+  --separted           # create one table per module
+  ```
+
+>[!NOTE]
+> **Currently, it's not possible to use pipeline yml files from other repositories.**  
+> Status on ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
+
+## Azure DevOps
+
+#### 1. Use this [Azure DevOps CI File](azure-pipelines.yml)
+
+#### 2. Check & update (if needed)
+  
+* Variable `PATH_TO_README`
+  ```yaml
+  variables:
+    PATH_TO_README: README.md
+  ```
+  
+* Call `doc_to_md.py` with optional arguments (-r / -e / -m / --separated)  
+  ```shell
+  python doc_to_md.py -f $(PATH_TO_README) [-r ROOT_DIR] [-e EXCLUDED_MODULES] [-m SELECTED_MODULES] [--separated]
+  
   -r ROOT_DIR          # Directory used as root for searching modules, defaults to folder containing README.md
   -e EXCLUDED_MODULES  # excluded module name(s) (without '.py'), separated with a whitespace, e.g. "module_x module_y"
   -m SELECTED_MODULES  # selected module(s)
