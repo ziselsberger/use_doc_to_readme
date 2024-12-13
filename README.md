@@ -175,7 +175,7 @@ pipelines:
 
 ## Azure DevOps
 
-#### 1. Use this [Azure DevOps CI File](azure-pipelines.yml)
+#### 1. Use this [Azure DevOps CI File](azure-pipelines.yaml)
 
 #### 2. Check & update (if needed)
   
