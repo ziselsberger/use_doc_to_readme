@@ -1,15 +1,13 @@
 name: Update README.md (use action)
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     
 
 jobs:
   doc-to-readme:
-    uses: ziselsberger/doc_to_readme@v1
-    with:
-      PATH_TO_README: "README.md"
-      EXCLUDED_MODULES: "doc_to_md"
+    steps:
+      - uses: ziselsberger/doc_to_readme@fcba1c836093402e7a4cb51d2518530c24cf3171
+        with:
+          PATH_TO_README: "README.md"
+          EXCLUDED_MODULES: "doc_to_md"
