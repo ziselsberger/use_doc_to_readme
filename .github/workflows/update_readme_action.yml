@@ -6,10 +6,10 @@ on:
 jobs:
   doc-to-readme:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: ziselsberger/doc_to_readme@main
         with:
           PATH_TO_README: "README.md"
           EXCLUDED_MODULES: "doc_to_md"
+        permissions:
+          contents: write
