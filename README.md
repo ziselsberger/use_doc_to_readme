@@ -201,25 +201,25 @@ pipelines:
 
 | Type | Name/Call | Description |
 | --- | --- | --- |
-| function  | `hello_world()` | Just says hello |
+| function  | <pre lang='py'>hello_world()</pre> | Just says hello |
 
 ### [my_classes.py](./src/my_classes.py)
 
 | Type | Name/Call | Description |
 | --- | --- | --- |
-| class  | `TechnicalQualityTests` | Base class for all technical QC Tests. |
-| method (TechnicalQualityTests) | `add_to_dict(self, test_name: str, test_result: Tuple[bool, str]) -> None` | Add QC result to dictionary. |
+| class  | <pre lang='py'>TechnicalQualityTests</pre> | Base class for all technical QC Tests. |
+| method (TechnicalQualityTests) | <pre lang='py'>add_to_dict(&#13;      self, &#13;      test_name: str, &#13;      test_result: Tuple[bool, str]&#13;  ) -> None</pre> | Add QC result to dictionary. |
 
 ### [my_functions.py](./src/my_functions.py)
 
 | Type | Name/Call | Description |
 | --- | --- | --- |
-| function  | `mean(x: int = 1, y: int = 2) -> float` | Calculate mean of x and y. |
-| function  | `add(x: int = 4, y: int = 5) -> int` | Add two numbers (x and y). |
-| function  | `multiply(x: int = 6, y: int = 7) -> int` | Multiply two numbers (x and y). |
+| function  | <pre lang='py'>mean(x: int = 1, y: int = 2) -> float</pre> | Calculate mean of x and y. |
+| function  | <pre lang='py'>add(x: int = 4, y: int = 5) -> int</pre> | Add two numbers (x and y). |
+| function  | <pre lang='py'>multiply(x: int = 6, y: int = 7) -> int</pre> | Multiply two numbers (x and y). |
 
 Created with: [doc_to_readme](https://github.com/ziselsberger/doc_to_readme)  
 [MIT](https://github.com/ziselsberger/doc_to_readme/blob/main/LICENSE) &copy; 2023 Mirjam Ziselsberger
 
 ---
-**Last Update:** 2024-12-13
+**Last Update:** 2024-12-14
