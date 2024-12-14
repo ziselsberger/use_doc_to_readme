@@ -3,11 +3,10 @@ name: Update README.md (use action)
 on:
   workflow_dispatch:
     
-
 jobs:
   doc-to-readme:
     runs-on: ubuntu-latest
-    uses: ziselsberger/doc_to_readme@fcba1c836093402e7a4cb51d2518530c24cf3171
+    uses: ziselsberger/doc_to_readme@main
     with:
       PATH_TO_README: "README.md"
       EXCLUDED_MODULES: "doc_to_md"
