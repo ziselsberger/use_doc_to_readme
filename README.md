@@ -195,10 +195,6 @@ pipelines:
   --separted           # create one table per module
   ```
 
->[!NOTE]
-> **Currently, it's not possible to use pipeline yml files from other repositories.**  
-> Status on ongoing development: https://jira.atlassian.com/browse/BCLOUD-14078
-
 ## Functions & Classes  
 
 ### [main.py](./main.py)
